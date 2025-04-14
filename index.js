@@ -309,7 +309,12 @@ var vite_config_default = defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
-    assetsDir: "assets"
+    assetsDir: "assets",
+    rollupOptions: {
+      input: {
+        main: path.resolve(import.meta.dirname, "client", "index.html")
+      }
+    }
   }
 });
 
